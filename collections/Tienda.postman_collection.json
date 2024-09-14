@@ -1,0 +1,235 @@
+{
+	"info": {
+		"_postman_id": "d2298e53-f1f4-44ba-b4ec-309d2e6e009a",
+		"name": "Tienda",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6596519",
+		"_collection_link": "https://crimson-escape-81554.postman.co/workspace/My-Workspace~6df918fc-6b61-4f6f-8ed6-25d76fedb188/collection/6596519-d2298e53-f1f4-44ba-b4ec-309d2e6e009a?action=share&source=collection_link&creator=6596519"
+	},
+	"item": [
+		{
+			"name": "Crear una tienda",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"La tienda de Andres\",\r\n    \"ciudad\": \"BOG\",\r\n    \"direccion\": \"calle 124\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/stores",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"stores"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear una tienda invalida",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"La tienda de Andrés\",\r\n    \"ciudad\": \"BOGO\",\r\n    \"direccion\": \"calle 124\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/stores",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"stores"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all tiendas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/stores",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"stores"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get one tienda",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/stores/572dcfa2-b70c-4f93-bd43-3c36e42c195d",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"stores",
+						"572dcfa2-b70c-4f93-bd43-3c36e42c195d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get one tienda invalid",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/stores/7c49d784-9844-4179-8aa5-a68fdc6933e6",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"stores",
+						"7c49d784-9844-4179-8aa5-a68fdc6933e6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update tienda",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"La tienda de Andrés\",\r\n    \"ciudad\": \"BOG\",\r\n    \"direccion\": \"calle 12555\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/stores/572dcfa2-b70c-4f93-bd43-3c36e42c195d",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"stores",
+						"572dcfa2-b70c-4f93-bd43-3c36e42c195d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update tienda invalid",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"La tienda de Andrés\",\r\n    \"ciudad\": \"BOG\",\r\n    \"direccion\": \"calle 12555\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/stores/7c49d784-9844-4179-8aa5-a68fdc6933e6",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"stores",
+						"7c49d784-9844-4179-8aa5-a68fdc6933e6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete tienda",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/stores/56a97d2e-51fd-43a0-8b09-c6dc75c7e834",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"stores",
+						"56a97d2e-51fd-43a0-8b09-c6dc75c7e834"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete tienda invalid",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/stores/7c49d784-9844-4179-8aa5-a68fdc6933e6",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"stores",
+						"7c49d784-9844-4179-8aa5-a68fdc6933e6"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": " http://localhost:3000/api/v1",
+			"type": "string"
+		}
+	]
+}

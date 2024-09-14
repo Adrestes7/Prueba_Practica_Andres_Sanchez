@@ -1,0 +1,234 @@
+{
+	"info": {
+		"_postman_id": "9f7195d7-9049-4589-b890-bfa83b930687",
+		"name": "Producto -> Tienda",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6596519",
+		"_collection_link": "https://crimson-escape-81554.postman.co/workspace/My-Workspace~6df918fc-6b61-4f6f-8ed6-25d76fedb188/collection/6596519-9f7195d7-9049-4589-b890-bfa83b930687?action=share&source=collection_link&creator=6596519"
+	},
+	"item": [
+		{
+			"name": "Add Store to product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/products/c8b4d1bc-266b-45fc-86e5-5fa734a96360/stores/ec8615e4-c998-4de8-bdb7-e17f4b149b2a",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"products",
+						"c8b4d1bc-266b-45fc-86e5-5fa734a96360",
+						"stores",
+						"ec8615e4-c998-4de8-bdb7-e17f4b149b2a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Store to product invalid store",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/products/c8b4d1bc-266b-45fc-86e5-5fa734a96360/stores/56a97d2e-51fd-43a0-8b09-c6dc75c7e834",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"products",
+						"c8b4d1bc-266b-45fc-86e5-5fa734a96360",
+						"stores",
+						"56a97d2e-51fd-43a0-8b09-c6dc75c7e834"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all stores by product",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/products/c8b4d1bc-266b-45fc-86e5-5fa734a96360",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"products",
+						"c8b4d1bc-266b-45fc-86e5-5fa734a96360"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get store by product",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/products/c8b4d1bc-266b-45fc-86e5-5fa734a96360/stores/ec8615e4-c998-4de8-bdb7-e17f4b149b2a",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"products",
+						"c8b4d1bc-266b-45fc-86e5-5fa734a96360",
+						"stores",
+						"ec8615e4-c998-4de8-bdb7-e17f4b149b2a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get store by product invalid",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/products/56a97d2e-51fd-43a0-8b09-c6dc75c7e834/stores/ec8615e4-c998-4de8-bdb7-e17f4b149b2a",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"products",
+						"56a97d2e-51fd-43a0-8b09-c6dc75c7e834",
+						"stores",
+						"ec8615e4-c998-4de8-bdb7-e17f4b149b2a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update stores by product invalid",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n        {\r\n            \"id\": \"ec8615e4-c998-4de8-bdb7-e17f4b149b2a\",\r\n            \"nombre\": \"La tienda de Felipe\",\r\n            \"ciudad\": \"BOG\",\r\n            \"direccion\": \"calle 124\"\r\n        },\r\n        {\r\n            \"id\": \"56a97d2e-51fd-43a0-8b09-c6dc75c7e834\",\r\n            \"nombre\": \"La tienda de Felipe\",\r\n            \"ciudad\": \"BOG\",\r\n            \"direccion\": \"calle 124\"\r\n        }\r\n    ]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/products/c8b4d1bc-266b-45fc-86e5-5fa734a96360/stores",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"products",
+						"c8b4d1bc-266b-45fc-86e5-5fa734a96360",
+						"stores"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update stores by product",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n        {\r\n            \"id\": \"ec8615e4-c998-4de8-bdb7-e17f4b149b2a\",\r\n            \"nombre\": \"La tienda de Felipe\",\r\n            \"ciudad\": \"BOG\",\r\n            \"direccion\": \"calle 124\"\r\n        },\r\n        {\r\n            \"id\": \"5a43dd1b-80d6-424b-a70e-d7c3a255001b\",\r\n            \"nombre\": \"La tienda de Felipe\",\r\n            \"ciudad\": \"BOG\",\r\n            \"direccion\": \"calle 124\"\r\n        }\r\n    ]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/products/c8b4d1bc-266b-45fc-86e5-5fa734a96360/stores",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"products",
+						"c8b4d1bc-266b-45fc-86e5-5fa734a96360",
+						"stores"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete store of a product",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/products/c8b4d1bc-266b-45fc-86e5-5fa734a96360/stores/ec8615e4-c998-4de8-bdb7-e17f4b149b2a",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"products",
+						"c8b4d1bc-266b-45fc-86e5-5fa734a96360",
+						"stores",
+						"ec8615e4-c998-4de8-bdb7-e17f4b149b2a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete store of a product invalid",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/products/c8b4d1bc-266b-45fc-86e5-5fa734a96360/stores/56a97d2e-51fd-43a0-8b09-c6dc75c7e834",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"products",
+						"c8b4d1bc-266b-45fc-86e5-5fa734a96360",
+						"stores",
+						"56a97d2e-51fd-43a0-8b09-c6dc75c7e834"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": " http://localhost:3000/api/v1",
+			"type": "string"
+		}
+	]
+}

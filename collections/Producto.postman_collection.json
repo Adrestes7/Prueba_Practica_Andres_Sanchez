@@ -1,0 +1,225 @@
+{
+	"info": {
+		"_postman_id": "a76f40de-3e72-4592-99e1-b32b707d7486",
+		"name": "Producto",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6596519",
+		"_collection_link": "https://crimson-escape-81554.postman.co/workspace/My-Workspace~6df918fc-6b61-4f6f-8ed6-25d76fedb188/collection/6596519-a76f40de-3e72-4592-99e1-b32b707d7486?action=share&source=collection_link&creator=6596519"
+	},
+	"item": [
+		{
+			"name": "Crear producto",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"carne\",\r\n    \"precio\": 2000,\r\n    \"tipo\": \"Perecedero\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/products",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Crear producto invalido",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"carne\",\r\n    \"precio\": 2000,\r\n    \"tipo\": \"Perecederos\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/products",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All productos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/products",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get one product",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/products/b761de71-dd85-4b13-a0fc-c5d6942634ef",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"products",
+						"b761de71-dd85-4b13-a0fc-c5d6942634ef"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get one product invalid",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/products/7c49d784-9844-4179-8aa5-a68fdc6933e6",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"products",
+						"7c49d784-9844-4179-8aa5-a68fdc6933e6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update product",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Pescado\",\r\n    \"precio\": 2000,\r\n    \"tipo\": \"Perecedero\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/products/b761de71-dd85-4b13-a0fc-c5d6942634ef",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"products",
+						"b761de71-dd85-4b13-a0fc-c5d6942634ef"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update product invalid",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\": \"Pescado\",\r\n    \"precio\": 2000,\r\n    \"tipo\": \"Perecedero\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/products/7c49d784-9844-4179-8aa5-a68fdc6933e6",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"products",
+						"7c49d784-9844-4179-8aa5-a68fdc6933e6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete product",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/products/75004b79-38be-4f35-b10c-3267713b0048",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"products",
+						"75004b79-38be-4f35-b10c-3267713b0048"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete product invalid",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": " http://localhost:3000/api/v1",
+			"type": "string"
+		}
+	]
+}
